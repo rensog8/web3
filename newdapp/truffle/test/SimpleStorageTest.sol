@@ -11,7 +11,7 @@ contract SimpleStorageTest {
   function testWriteValue() public {
     SimpleStorage simpleStorage = SimpleStorage(DeployedAddresses.SimpleStorage());
 
-    Assert.equal(simpleStorage.read(1), 0, "Contract should have 0 stored");
+    Assert.equal(simpleStorage.read(), 0, "Contract should have 0 stored");
     simpleStorage.write(1);
     Assert.equal(simpleStorage.read(), 1, "Contract should have 1 stored");
     simpleStorage.write(2);
