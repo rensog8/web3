@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [state, setState] = useState({web3:null, contract:null});
-  const [data, setData] = useState("nil");
+  const [data, setData] = useState({});
 
   useEffect(()=> {
-    const provider = new Web3.providers.HttpProvider("HTTP://127.0.0.1.7545")
+    const provider = new Web3.providers.HttpProvider("http://127.0.0.1.7545")
     async function template(){
       const web3 = new Web3(provider);
       const network = await web3.eth.net.getId();
